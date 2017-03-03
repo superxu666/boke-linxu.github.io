@@ -1,141 +1,158 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>编程挑战</title>
+	<title></title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script type="text/javascript" src="js/setHomeSetFav.js" charset="gb2312"></script>
 	<!-- myfocus库文件 -->
 	<script type="text/javascript" src="js/myfocus-2.0.1.min.js"></script>
 	<!-- myfocus风格文件，css和js -->
 	<script type="text/javascript" src="js/mf-pattern/mF_YSlider.js"></script>
 	<link rel="stylesheet" type="text/css" href="js/mf-pattern/mF_YSlider.css">
-
+	<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
 	<script type="text/javascript">
 		myFocus.set({
-			id:'pic_box'
+			id:'picBox'
 		})
 	</script>
 </head>
 <body>
 <div class="top">
-	<div class="nav">
-		<div class="nav_left">
-			<img src="http://img.mukewang.com/53edadad0001efe202000070.jpg" alt="">
-		</div>
-		<div class="nav_right">
-			<ul>
-				<li><a href="#">首页</a></li>
-				<li><a href="#">产品特色</a></li>
-				<li><a href="#">解决方案</a></li>
-				<li><a href="#">产品价格</a></li>
-				<li><a href="#">帮助中心</a></li>
-				<li><a href="#">关于我们</a></li>
-			</ul>
-		</div><!-- nav结束 -->
-	</div><!-- top_nav结束 -->
+	<div class="top_content">
+		<ul>
+			<li><a href="#">联系我们</a></li>
+			<li><a href="#" onclick="AddFavorite(window.location,document.title)">加入收藏</a></li>
+			<li><a href="#" onclick="SetHome(window.location)">设为首页</a></li>
+		</ul>
+	</div>
 </div><!-- top结束 -->
-<div class="wrap clearfix">
-	<div class="picBox" id="pic_box">
-		<div class="loading">
-			<img src="http://img.mukewang.com/53edad8c000175cb00300029.jpg" alt="加载中...">
+<div class="wrap">
+	<div class="logo">
+		<div class="logo_left">
+			<img src="images/logo.jpg" alt="慕课网">
 		</div>
+		<div class="logo_right">
+			<img src="images/tel.jpg" alt="服务热线">24小时服务热线:<span class="tel">123-4567-8900</span>
+		</div>
+	</div>
+	<div class="nav">
+		<div class="nav_left"></div>
+		<div class="nav_mid">
+			<div class="nav_mid_left">
+				<ul>
+					<li><a href="#">首页</a></li>
+					<li><a href="list.html">关于慕课</a></li>
+					<li><a href="list.html">新闻动态</a></li>
+					<li><a href="list.html">课程中心</a></li>
+					<li><a href="list.html">在线课程</a></li>
+					<li><a href="list.html">人才招聘</a></li>
+				</ul>
+			</div>
+			<div class="nav_mid_right">
+				<form action="" method="post">
+					<input type="text" class="search_text" />
+				</form>
+			</div>
+		</div><!-- nav_mid结束 -->
+		<div class="nav_right"></div>
+	</div><!-- nav结束 -->
+	<div class="ad" id="picBox">
+		<div class="loading"><img src="images/loading.gif" alt="图片加载中"></div>
 		<div class="pic">
 			<ul>
-				<li><img src="http://img.mukewang.com/53edad1600019ae910000310.jpg" alt=""></li>
-				<li><img src="http://img.mukewang.com/53edad2c0001b61310000314.jpg" alt=""></li>
-				<li><img src="http://img.mukewang.com/53edad3e0001afad10000318.jpg" alt=""></li>
+				<li><img src="images/ad2.jpg" alt="" /></li>
+				<li><img src="images/ad3.jpg" alt="" /></li>
+				<li><img src="images/ad4.jpg" alt="" /></li>
 			</ul>
 		</div>
-	</div>
-	<div class="rollingnews">
-		<span class="rolling_left">滚动新闻</span>
-		<span class="rolling_right">又是滚动新闻</span>
-	</div>
-	<div class="ad clearfix">
-		<div class="ad_left">
-			<a href="#"><img src="http://img.mukewang.com/53edad54000119fb03300130.jpg" alt=""></a>
-			<p>玩转BootStrap</p>
-		</div>
-		<div class="ad_mid">
-			<a href="#"><img src="http://img.mukewang.com/53edad690001260a03300130.jpg" alt=""></a>
-			<p>企业网站案例</p>
-		</div>
-		<div class="ad_right">
-			<a href="#"><img src="http://img.mukewang.com/53edad7a0001cde803300130.jpg" alt=""></a>
-			<p>JavaStript基础</p>
-		</div>
-	</div>
-	<!--新闻中心-->
-	<div class="newsColumn">
+	</div><!-- ad结束 -->
+	<div class="main">
 		<div class="news">
-			<div class="news_title">
-				<h2>新闻中心</h2>	
-			</div>
-			<div class="newsCenter_list">
+			<div class="title">
+				<h2 class="title_left">新闻中心</h2><span class="title_right"><a href="news.html">More&gt;&gt;</a></span>
+			</div><!-- title结束 -->
+			<div class="pic_news">
+				<img src="images/news.jpg"><h2><a href="news.html">520 慕女神喊你来表白！</a></h2><p>活动时间：5月20号--5月25号<br>获奖公布时间：5月26号<br/><a href="news.html">Learn More&gt;&gt;</a></p>
+			</div><!-- pic_news结束 -->
+			<div class="news_list">
 				<ul>
-					<li><span>8月23日</span><a href="#">学习计划之“Android攻城狮初养成”</a>想成为Android攻城狮？想开发一款专属App？没有任何基础的你，应该从何学起?</li>
-					<li><span>8月23日</span><a href="#">学习计划之“Android攻城狮初养成”</a>想成为Android攻城狮？想开发一款专属App？没有任何基础的你，应该从何学起?</li>
-					<li><span>8月23日</span><a href="#">学习计划之“Android攻城狮初养成”</a>想成为Android攻城狮？想开发一款专属App？没有任何基础的你，应该从何学起?</li>
-					<li><span>8月23日</span><a href="#">学习计划之“Android攻城狮初养成”</a>想成为Android攻城狮？想开发一款专属App？没有任何基础的你，应该从何学起?</li>
+					<li><span>2014-06-01</span><a href="#">【慕课访谈 用户篇】“有为屌丝”在路上</a></li>
+					<li><span>2014-06-01</span><a href="#">【有奖活动】给父亲的三行书信</a></li>
+					<li><span>2014-05-30</span><a href="#">《程序猿，请晒出你的童年》活动获奖公告</a></li>
+					<li><span>2014-05-28</span><a href="#">【慕课访谈】破茧成蝶————美女程序猿的锐变史</a></li>
 				</ul>
-			</div>
-		</div>
-		<!--热门活动-->
-		<div class="activity">
-			<h2>热门活动</h2>
-			<div class="activity_pic">
-				<img src="http://img.mukewang.com/53edacdd0001b8e804820302.jpg" alt="">
-			</div>
-			<div class="activity_list">
+			</div><!-- news_list结束 -->
+		</div><!-- news结束 -->
+		<div class="course">
+			<div class="title">
+				<h2 class="title_left">课程中心</h2><span class="title_right"><a href="news.html">More&gt;&gt;</a></span>
+			</div><!-- title -->
+			<div class="course_pic">
+				<img src="images/css.jpg"><h2><a href="news.html">CSS圆角进化论</a></h2><p>CSS圆角的实现，经历了三大发展阶段：背景图片方式、CSS2.0+HTMl标签模拟、CSS3.0圆角属性）。本案例详细讲解每一种的实现方式，并对 实现的优缺点进行对比分析。</p>
+			</div><!-- course_pic -->
+			<div class="course_type">
 				<ul>
-					<li>慕课网2048游戏源码征集</li>
-					<li>慕课网2048游戏源码征集</li>
-					<li>慕课网2048游戏源码征集</li>
-					<li>慕课网2048游戏源码征集</li>
-					<li>慕课网2048游戏源码征集</li>
+					<li>PHP开发</li>
+                    <li>前端开发</li>
+                    <li>JAVA开发</li>
+                    <li>Android开发</li>
 				</ul>
-			</div>
-		</div>
-		<!--联系我们-->
-		<div class="contactUs">
-			<h2>联系我们</h2>
-			<p>讲师招募</p>
-			<p>邹同学</p>
-			<p>电话：18911888156</p>
-			<p>QQ：576264119</p>
-			<p>E-mail：daisy@imooc.com</p>
-			<br>
-			<p>网站合作</p>
-			<p>吕同学</p>
-			<p>电话：13262771103</p>
-			<p>QQ：105909142</p>
-			<p>E-mail：lvyang@imooc.com</p>
-		</div>
+			</div><!-- course_type -->
+		</div><!-- course结束 -->
+		<div class="sidebar">
+			<div class="video">
+				<div class="title"><h2 class="title_left">媒体聚焦</h2></div>
+				<div class="video_content"><embed src='http://player.youku.com/player.php/sid/XMTQ5OTEyNDEyNA==/v.swf' allowFullScreen='true' quality='high' width='220' height='140' align='middle' allowScriptAccess='always' type='application/x-shockwave-flash'></embed></div>
+			</div><!-- video -->
+			<div class="sidebar_ad">
+				<img src="images/app.jpg">
+			</div><!-- sidebar_ad -->
+		</div><!-- sidebar结束 -->
+	</div><!-- main结束 -->
+</div><!-- wrap -->
+<div class="copyright">
+	<div class="copyright_content">
+		<ul>
+			<li><a href="#">关于</a>
+				<ul>
+					<li><a href="#">品牌故事</a></li>
+					<li><a href="#">联系我们</a></li>
+					<li><a href="#">加入我们</a></li>
+					<li><a href="#">版权声明</a></li>
+				</ul>
+			</li>
+			<li><a href="#">课程</a>
+				<ul>
+					<li><a href="#">PHP开发</a></li>
+					<li><a href="#">前端开发</a></li>
+					<li><a href="#">JAVA开发</a></li>
+					<li><a href="#">Android开发</a></li>
+				</ul>
+			</li>
+			<li><a href="#">留言</a>
+				<ul>
+					<li><a href="#">新浪微博</a></li>
+					<li><a href="#">腾讯微博</a></li>
+					<li><a href="#">企业微信</a></li>
+					<li><a href="#">QQ空间</a></li>
+				</ul>
+			</li>
+			<li><a href="#">关注</a>
+				<ul>
+					<li><a href="#">意见反馈</a></li>
+					<li><a href="#">问题留言</a></li>
+					<li><a href="#">媒体联络</a></li>
+					<li><a href="#">在线客服</a></li>
+				</ul>
+			</li>
+			<li><a href="#"><img src="images/weixin.png">关注微信</a>
+				<ul>
+					<li><img src="images/qrcode.jpg"></li>
+				</ul>
+			</li>
+		</ul>
 	</div>
-</div>
-<div class="footer">
-	<div class="copyright"><p>Copyright &copy; 2013 imooc.com
-	All Rights Reserved 京ICP备 13046642号-2</p></div>
 </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
