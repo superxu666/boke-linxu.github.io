@@ -300,6 +300,9 @@ body{
 .copyright_content li ul li a{
 	font-size: 14px;
 }
+.copyright_content li ul li a:hover{
+	text-decoration: underline;
+}
 
 /*--------------------------------list.html页的css------------------------------*/
 
